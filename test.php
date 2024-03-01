@@ -27,6 +27,18 @@ class Pcb extends PC_Controller
         return $this->res(200, null, $result);
     }
 
+    public function test()
+    {
+        $params = $this->accepted_params();
+        //
+        // echo json_encode($params);die();
+        $params = $this->validate($params, 'approve');
+
+        $result = $this->coreapi->hk_application_approval($params);
+
+        return $this->res(200, null, $result);
+    }
+
     public function get_pcb_user()
     {
         $params = $this->accepted_params();
