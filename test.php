@@ -21,6 +21,10 @@ class Pcb extends PC_Controller
         //
         // echo json_encode($params);die();
         $params = $this->validate($params, 'approve');
+        $params = $this->validate($params, 'approve');
+        $params = $this->validate($params, 'approve');
+        $params = $this->validate($params, 'approve');
+        $params = $this->validate($params, 'approve');
 
         $result = $this->coreapi->hk_application_approval($params);
 
