@@ -17,7 +17,7 @@ class Pcb extends PC_Controller
 
     public function approve()
     {
-        $params = $this->accepted_params();
+        $params = $this->params();
         //
         // echo json_encode($params);die();
         $params = $this->validate($params, 'approve');
@@ -33,7 +33,7 @@ class Pcb extends PC_Controller
 
     public function test()
     {
-        $params = $this->accepted_params();
+        $params = $this->params();
         //
         // echo json_encode($params);die();
         $params = $this->validate($params, 'approve');
